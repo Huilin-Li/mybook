@@ -1,3 +1,7 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+[Random Notes]
+
+# Paper reading 
+
+- [language model](./chapter_1.md)
