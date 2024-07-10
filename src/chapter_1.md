@@ -9,6 +9,7 @@ I would like to keep sharing what I am learning.
 
 
 ## Simulating 500 million years of evolution with a language model 
+### article
 In *Introduction* section, authors state why they started this work. Firstly, architectures and representations within language models, especially transformer-based ones, map very well onto the world of protein. Secondly, "Great strength produces miracles". Increasing scale means increasing accuracy.
 > A number of language models of protein sequences have now been developed and evaluated (5–10, 12–17). It has been found that the representations that emerge within language models reflect the biological structure and function of proteins (6–8, 18), and are learned without any supervision on those properties (19, 20), improving with scale (5, 21). In the field of artificial intelligence, scaling laws have been found that predict the growth in capabilities with increasing scale, describing a frontier in compute, parameters, and data.
 
@@ -22,9 +23,16 @@ They then performed a first experiment with 88 designs.
 > Among the generations that we synthesized, we found a bright fluorescent protein at far distance (58% identity) from known fluorescent proteins. Similarly distant natural fluorescent proteins are separated by over five hundred million years of evolution
 
 
-
+The SEM3, a multi-modal transformer-based generative model, makes it true to find or design new proteins based on certain conditions.
 > We have found that language models can reach a design space of proteins that is distant from the space explored by natural evolution, and generate functional proteins that would take evolution hundreds of millions of years to discover. Protein language models do not explicitly work within the physical constraints of evolution, but instead can implicitly construct a model of the multitude of potential paths evolution could have followed
 
 
+### notes
+What excits me a lot in this article? (I am thinking these points might be used in my tasks.)
+1. the way of integrating sequence, structure and function together.
+2. the application of transformer model.
 
+I spend some time on the Transformer model. In the following example, it is a translation from lets go to vamos.
+
+<p><img src="img/en-de.png" alt="en-de" /></p>
 
