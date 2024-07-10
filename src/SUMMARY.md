@@ -1,6 +1,6 @@
 # Summary
 
-[Random Notes]
+[Random Notes](README.md)
 
 # Paper reading 
 

@@ -1,6 +1,9 @@
 # large-language model (LLM)
 
-Recently, I read some three papers. I would like to keep sharing what I am learning.
+Recently, I read some papers, and I found one commonality that they treat protein data as text data. The natural language processing (NLP) methods are highly
+
+
+I would like to keep sharing what I am learning.
 1. Hayes, Tomas, et al. "Simulating 500 million years of evolution with a language model." bioRxiv (2024): 2024-07.
 
 
