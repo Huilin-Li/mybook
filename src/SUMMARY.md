@@ -4,8 +4,8 @@
 
 # Paper reading 
 
-- [language model](./chapter_1.md)
-
+- [language model](./paper/llm.md)
+- [large-scale data analysis](./paper/FLSHclust.md)
 
 # Proteomics
 - [enoding](./encoding.md)
