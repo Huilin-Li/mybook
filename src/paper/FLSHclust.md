@@ -5,6 +5,8 @@
 sequence data in fasta format
 
 ## Algorithm outline
-###### 1. Input the original data.
-###### 2. Initial analysis to find most likely similar pairs. 
-* **Completely remake**
+1. Input the original data.
+2. Initial analysis to find most likely similar pairs. 
+     - e.g. we have 1000 sequence, there should have 499,500 pairs for comparison study. 
+     - reproduced successfully
+     
