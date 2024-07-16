@@ -30,7 +30,6 @@ sequence data in fasta format
 This is a bad thing that you should pay attention to.
 
 
-
 </div>
 
 
