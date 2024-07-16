@@ -24,11 +24,15 @@ sequence data in fasta format
     - filter again based on one threshold `min_seq_id`.
     - potential pairs are narrowed down again from 6041 to 21.
     - yes, the final 19 pairs all come from these 21 pairs.
+
+<div class="warning">
+
+This is a bad thing that you should pay attention to.
+
+
+
+</div>
+
+
 6. continue ...
-    ```
-
-    ```
-
-
-
-     
+    
