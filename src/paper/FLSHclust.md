@@ -27,8 +27,12 @@ sequence data in fasta format
 
 
 <div class="warning">
-In my opinion, 
+In my opinion, in the view of discovering similar pairs, till now, it has already finished the work to discover similar pairs in a large dataset. If we summary the previous steps, we can see: for example, 
 
+1000 seq (~500K pairs) `---step1--->` 6041 pairs `---step2--->` 21 pairs
+
+- In `step1`, LSH algorithm is the core role. It reduces the number of comparisons to a few thousands.
+- In `step2`, the common similarity calculation method is performed.
 </div>
 
 
