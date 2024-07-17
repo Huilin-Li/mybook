@@ -34,6 +34,6 @@ What excits me a lot in this article? (I am thinking these points might be used 
 
 I spend some time on the Transformer model. In the following example, it is a translation from lets go to vamos.
 
-<p><img src="img/en-de.png" alt="en-de" /></p>
+<p><img src="../img/en-de.png" alt="en-de" /></p>
 
-<p><img src="img/en.png" alt="en-de" /></p>
+<p><img src="../img/en.png" alt="en-de" /></p>
