@@ -25,7 +25,6 @@ sequence data in fasta format
     - potential pairs are narrowed down again from 6041 to 21.
     - yes, the final 19 pairs all come from these 21 pairs.
 
-
 <div class="warning">
 In my opinion, in the view of discovering similar pairs, till now, it has already finished the work to discover similar pairs in a large dataset. If we summary the previous steps, we can see: for example, 
 
@@ -33,6 +32,16 @@ In my opinion, in the view of discovering similar pairs, till now, it has alread
 
 - In `step1`, LSH algorithm is the core role. It reduces the number of comparisons to a few thousands.
 - In `step2`, the common similarity calculation method is performed.
+
+**Why the cluster work is already done at this moment?**
+If we check these 21 pairs and the final 19 pairs carefully, wa can see the 21 pairs already are divided into 19 groups. And, the final 19 pairs come from each cluster, and pick the most similar pair if there are more than one pairs in each cluster. For example, if we talk about the similar sequence to Seq_173, we find two: Seq_715 and Seq_896, however, in the final output, we only pick the Seq_715 which is the most similar one.
+
+
+| 19 pairs | 21 pairs |
+|---------|---------|
+|(173, 715)|(173,715), (173,896)|
+|(889,582)|(889,582), (889,906)|
+
 </div>
 
 
