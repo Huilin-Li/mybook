@@ -36,5 +36,6 @@ In my opinion, in the view of discovering similar pairs, till now, it has alread
 </div>
 
 
-6. continue ...
+6. If we continue their work, we can see their following work is to point out the only pairs who are most close to each other in each cluster.
+7. That is the reason of why we only see two similar sequence in each cluster in the final output file.
     

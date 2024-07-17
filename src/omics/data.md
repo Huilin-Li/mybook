@@ -3,6 +3,8 @@
 ## ftp.ensembl.org
 <https://ftp.ensembl.org/pub/current_fasta/>
 
+size(no duplicates): 11,551,135 (11 million)
+
 ```shell
 # get .gz files
 wget -r -np -e robots=off -A 'pep.all.fa.gz' https://ftp.ensembl.org/pub/current_fasta/ 
