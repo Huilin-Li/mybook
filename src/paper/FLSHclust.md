@@ -48,3 +48,16 @@ If we check these 21 pairs and the final 19 pairs carefully, wa can see the 21 p
 6. If we continue their work, we can see their following work is to point out the only pairs who are most close to each other in each cluster.
 7. That is the reason of why we only see two similar sequence in each cluster in the final output file.
     
+
+## LSH work reproduce
+
+
+
+
+
+
+
+
+
+## Application in 11M sequence
+outofmemory when performing PySpark calculation. --> incorrectly use Spark
