@@ -8,4 +8,8 @@
 - [large-scale data analysis](./paper/FLSHclust.md)
 
 # Proteomics
-- [enoding](./encoding.md)
+- [dataset](./omics/data.md)
+- [enoding](./omics/encoding.md)
+
+# Network
+- [d3graph](./network.md)
