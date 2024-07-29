@@ -4,7 +4,7 @@
 ## Data
 sequence data in fasta format
 
-## Algorithm outline
+## Algorithm overview
 1. Input the original data.
 2. Initial analysis to find most likely similar pairs. 
      - e.g. we have 1000 sequence, there should have 499,500 pairs for comparisons. The work of this initial analysis is to narrow these pairs down to 6041 pairs. 
@@ -50,7 +50,17 @@ If we check these 21 pairs and the final 19 pairs carefully, wa can see the 21 p
     
 
 ## LSH work reproduce
+## `./MYANAWORK/`
+```
+└── all_data.fa
+└── smallflsh
+    └── __init__.py
+    └── functions.py
+        └── read_to_parquet(fastapath, parquestpath)
 
+```
+## outline
+1. read into [`ID`, `aa_seq`]
 
 
 
@@ -61,3 +71,4 @@ If we check these 21 pairs and the final 19 pairs carefully, wa can see the 21 p
 
 ## Application in 11M sequence
 outofmemory when performing PySpark calculation. --> incorrectly use Spark
+## 

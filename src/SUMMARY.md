@@ -5,6 +5,7 @@
 # Paper reading 
 
 - [language model](./paper/llm.md)
+- [domain definition](./paper/domaindefinition.md)
 
 
 # Reproduce model
@@ -17,5 +18,8 @@
 - [dataset](./omics/data.md)
 - [enoding](./omics/encoding.md)
 
-# Network
-- [d3graph](./network.md)
+# random biology knowledge
+- [BIO1](./bio1.md)
+
+# Shell everything
+- [shell](./shell.md)
