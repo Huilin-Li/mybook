@@ -1,9 +1,12 @@
 # domain definition
  If I have protein dataset, and I can perform cluster analysis, then, how to define or decide to say this set of (parts of) sequences is much worthy for us to do wet-lab experiments, in order to discover new domains.
 
+  - [discover uncharacterized proteins with targe domains/domains with target functions](#discover-new-proteins-with-targe-domains)
+  - [discover uncharacterized proteins](#discover-uncharacterized-proteins-purely-using-cluster-and-alignment-analysis)
+
  > SCOPe: Structural Classification of Proteins—extended, integrating SCOP and ASTRAL data and classification of new structures 
 
-## 2
+## discover uncharacterized proteins with targe domains
  > Structure-guided discovery of ancestral CRISPR-Cas13 ribonucleases
 1. automated structureal-search pipeline
     * identify an ancestral clade of Cas13 (Cas13an).
@@ -11,7 +14,7 @@
 2. Cas13an is 1/3 size of other Cas13s
 3. Cas13an mediates: 1) robust programmable RNA depletion and 2) defense against diverse bacteriophages
 4. **pipeline:** 
-    1) leveraged a Fold seek-clustered AlphaFold database (20), whose reduced search space makes slow-but-sensitive DALI searches feasible. **DALI server**: [link](http://ekhidna2.biocenter.helsinki.fi/dali/)
+    1) leveraged a Fold seek-clustered AlphaFold database (20), whose reduced search space makes slow-but-sensitive DALI searches feasible. **Preprocessed AlphaFold Database for use with DaliLite running locally**: [link](http://ekhidna2.biocenter.helsinki.fi/dali/digest.html)
     2) Using representative HEPN dimers within known Cas13 proteins (21–23) as the search query, we found twelve previously uncharacterized protein clusters in the AlphaFold database bearing an intramolecular HEPN dimer (fig. S1 and tables S1 and S2).
     3) Further sequence-based homology searches and genomic analyses revealed that two of the newly identified clusters occur next to CRISPR arrays, representing a new Cas13 subtype (Cas13an) (Fig. 1A and fig. S2)
     4) Notably, neither Foldseek nor hidden Markov model searches were able to detect significant homology between previously known Cas13s and Cas13an (fig. S3). 
@@ -25,4 +28,30 @@
 5. **~2.3 million cluster representatives** were subdivided into batches that each contained 1000 structures, resulting in a total of 2304 batches.
 6. After completing DALI-searches against the AlphaFold database, only hits with the signature Rx4H motif of HEPN domains and a DALI Z-score greater than 6 were retained.
 7. Finally, only hits that also bear an intramolecular HEPN dimer were considered as Cas13 candidates.
-8. 
+8. Sequences of Cas13 candidates were retrieved and used as input for PSI-BLAST (45) and HMMsearch (46) against the NCBI NR database (47) using default settings.
+9. contigs encoding the Cas13 candidates were downloaded, and annotated for CRISPR arrays using the CRT tool (v1.2) (48). This analysis led to the identification of the Cas13an systems characterized in this study.
+10. 
+
+## discover uncharacterized proteins purely using cluster and alignment analysis
+> Holm, Liisa, et al. "DALI shines a light on remote homologs: One hundred discoveries." Protein Science 32.1 (2023): e4519.
+
+1. Pfam 35.0, which contains a total of 19,632 families. Among these, 7770 families are grouped into 655 clans, corresponding to superfamilies in other classifications (Mistry et al., 2020).
+2. Many Pfam families represent domains, covering only part of a protein.
+3. For each Pfam family, we selected a representative member of median length for that family. 
+
+1. Pfam 35.0 has 19,632 families.
+    - select 59% who are in AlphaFold Database version 1
+        - cut-off pLDDT<70, resulting in cropped models
+        - (BECAUSE: at not all AlphaFold models are compact and globular)\
+          *-* filter0: remove many ill-folded models from the analysis as confirmed by visual inspection.\
+          *-* filter2: the contact order (CO) had to meet the range of native proteins (CO > 0.05)\
+          *-* the model had to exhibit at least 60 confidently modeled residues represented by at least four secondary structure elements, that is, either alpha helices or beta strands.
+            - (BECAUSE: Pfam provides public tables that link (i) PDB structures to protein families, and (ii) distantly related families to clans.)\
+                *-* remove families that have a member with a PDB structure.\
+                *-* remove families that having a clan member with a PDB structure.\
+    ----> 1712 families without known structures.\
+
+
+
+
+           
