@@ -49,7 +49,7 @@
             - (BECAUSE: Pfam provides public tables that link (i) PDB structures to protein families, and (ii) distantly related families to clans.)\
                 *-* remove families that have a member with a PDB structure.\
                 *-* remove families that having a clan member with a PDB structure.\
-    ----> 1712 families without known structures.\
+    ----> 1412 families without known structures.\
 
 
 
