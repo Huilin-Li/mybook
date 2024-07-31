@@ -80,6 +80,6 @@ a set of protein IDs sorted by its possibility of being closer to target protein
 
 
 
-## Application in 11M sequence
+## Application in 11M sequences
 outofmemory when performing PySpark calculation. --> incorrectly use Spark --> change to use **dask-cuDF**, works
-## 
+## ongoing
