@@ -57,12 +57,23 @@ If we check these 21 pairs and the final 19 pairs carefully, wa can see the 21 p
     └── __init__.py
     └── functions.py
         └── read_to_parquet(fastapath, parquestpath)
+├── myflsh.py
+├── sample1k.fa
+├── smallflsh
+│   ├── functions.py
+│   |    ├── read_to_parquet(fastapath, parquestpath)
 
+│   ├── get_kmers.py
+│   ├── __init__.py
+├── target.fa
 ```
+
+
 ## outline
 1. read into [`ID`, `aa_seq`]
 
-
+2. till now, resulting in \
+a set of protein IDs sorted by its possibility of being closer to target protein.
 
 
 
@@ -70,5 +81,5 @@ If we check these 21 pairs and the final 19 pairs carefully, wa can see the 21 p
 
 
 ## Application in 11M sequence
-outofmemory when performing PySpark calculation. --> incorrectly use Spark
+outofmemory when performing PySpark calculation. --> incorrectly use Spark --> change to use **dask-cuDF**, works
 ## 

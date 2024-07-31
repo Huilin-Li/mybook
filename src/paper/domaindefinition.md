@@ -1,12 +1,12 @@
 # domain definition
  If I have protein dataset, and I can perform cluster analysis, then, how to define or decide to say this set of (parts of) sequences is much worthy for us to do wet-lab experiments, in order to discover new domains.
 
-  - [discover uncharacterized proteins with targe domains/domains with target functions](#discover-new-proteins-with-targe-domains)
-  - [discover uncharacterized proteins purely using cluster and alignment analysis](#discover-uncharacterized-proteins-purely-using-cluster-and-alignment-analysis)
+  1. [discover uncharacterized proteins with targe domains/domains with target functions](#discover-new-proteins-with-targe-domains)
+  2. [discover uncharacterized proteins purely using cluster and alignment analysis](#discover-uncharacterized-proteins-purely-using-cluster-and-alignment-analysis)
 
  > SCOPe: Structural Classification of Proteins—extended, integrating SCOP and ASTRAL data and classification of new structures 
 
-## discover uncharacterized proteins with targe domains
+## 1. discover uncharacterized proteins with targe domains
  > Structure-guided discovery of ancestral CRISPR-Cas13 ribonucleases
 1. automated structureal-search pipeline
     * identify an ancestral clade of Cas13 (Cas13an).
@@ -32,7 +32,7 @@
 9. contigs encoding the Cas13 candidates were downloaded, and annotated for CRISPR arrays using the CRT tool (v1.2) (48). This analysis led to the identification of the Cas13an systems characterized in this study.
 10. 
 
-## discover uncharacterized proteins purely using cluster and alignment analysis
+## 2. discover uncharacterized proteins purely using cluster and alignment analysis
 > Holm, Liisa, et al. "DALI shines a light on remote homologs: One hundred discoveries." Protein Science 32.1 (2023): e4519.
 
 1. Pfam 35.0, which contains a total of 19,632 families. Among these, 7770 families are grouped into 655 clans, corresponding to superfamilies in other classifications (Mistry et al., 2020).
