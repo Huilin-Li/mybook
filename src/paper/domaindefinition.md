@@ -2,7 +2,7 @@
  If I have protein dataset, and I can perform cluster analysis, then, how to define or decide to say this set of (parts of) sequences is much worthy for us to do wet-lab experiments, in order to discover new domains.
 
   - [discover uncharacterized proteins with targe domains/domains with target functions](#discover-new-proteins-with-targe-domains)
-  - [discover uncharacterized proteins](#discover-uncharacterized-proteins-purely-using-cluster-and-alignment-analysis)
+  - [discover uncharacterized proteins purely using cluster and alignment analysis](#discover-uncharacterized-proteins-purely-using-cluster-and-alignment-analysis)
 
  > SCOPe: Structural Classification of Proteins—extended, integrating SCOP and ASTRAL data and classification of new structures 
 
