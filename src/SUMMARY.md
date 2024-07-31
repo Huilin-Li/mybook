@@ -20,6 +20,8 @@
 
 # random biology knowledge
 - [BIO1](./bio1.md)
+- [BIO2](./bio2.md)
+- [BIO3](./bio3.md)
 
 # Shell everything
 - [shell](./shell.md)
