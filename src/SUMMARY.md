@@ -11,8 +11,7 @@
 # Reproduce model
 - [FLSHclust](./paper/FLSHclust.md)
 
-# PySpark
-- [functions](./PYSPARK/functions.md)
+
 
 # Proteomics
 - [dataset](./omics/data.md)
