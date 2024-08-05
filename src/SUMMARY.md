@@ -16,9 +16,10 @@
 - [enoding](./omics/encoding.md)
 
 # random biology knowledge
-- [BIO1](./bio1.md)
-- [BIO2](./bio2.md)
-- [BIO3](./bio3.md)
+- [BIO1](./bio_knowledge/bio1.md)
+- [BIO2](./bio_knowledge/bio2.md)
+- [BIO3](./bio_knowledge/bio3.md)
+- [vocab](./bio_knowledge/vocab.md)
 
 # Shell everything
 - [shell](./shell.md)
