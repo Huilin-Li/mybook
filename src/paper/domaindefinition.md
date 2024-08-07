@@ -210,6 +210,11 @@ COMPLETE: 100%|█████████████████████�
 
 ```
 
+1. 5XWP:
+![alt text](../img/5XWP.png)
+
+
+
 
 ## 2. discover uncharacterized proteins purely using cluster and alignment analysis
 > Holm, Liisa, et al. "DALI shines a light on remote homologs: One hundred discoveries." Protein Science 32.1 (2023): e4519.

@@ -2,13 +2,10 @@
 
 [Random Notes](README.md)
 
-# Paper reading 
+# Replication study
 
 - [language model](./paper/llm.md)
 - [domain definition](./paper/domaindefinition.md)
-
-
-# Reproduce model
 - [FLSHclust](./paper/FLSHclust.md)
 
 # Proteomics
