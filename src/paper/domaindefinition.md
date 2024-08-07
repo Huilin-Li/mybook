@@ -7,7 +7,80 @@
  > SCOPe: Structural Classification of Proteins—extended, integrating SCOP and ASTRAL data and classification of new structures 
 
 ## 1. discover uncharacterized proteins with targe domains
+### replication
  > Structure-guided discovery of ancestral CRISPR-Cas13 ribonucleases
+1. Cas13a, Cas13b, and Cas13d whose structures are PDBID: 5XWP, 6DTD, 6E9F
+2. *For Cas13c, which lacks an experimental structure, a ColabFold (43) model of A0A9X2MGT7 was generated using three recycles without amber relaxation.*
+<details>
+  <summary>ColabFold Usage</summary>
+  
+  ```
+  # https://github.com/sokrypton/ColabFold
+  colabfold_batch A0A9X2MGT7.fasta out_dir --num-recycle 3
+
+  # To activate this environment, use
+  #
+  #     $ conda activate /storage/shenhuaizhongLab/lihuilin/ColabFold/localcolabfold/colabfold-conda
+  #
+  # To deactivate an active environment, use
+  #
+  #     $ conda deactivate
+  Installation of ColabFold finished.
+  Add /storage/shenhuaizhongLab/lihuilin/ColabFold/localcolabfold/colabfold-conda/bin to your PATH environment variable to run 'colabfold_batch'.
+  i.e. for Bash:
+          export PATH="/storage/shenhuaizhongLab/lihuilin/ColabFold/localcolabfold/colabfold-conda/bin:$PATH"
+  For more details, please run 'colabfold_batch --help'.
+
+
+  (/storage/shenhuaizhongLab/lihuilin/ColabFold/localcolabfold/colabfold-conda) [lihuilin@gvnq04 localcolabfold]$ colabfold_batch A0A9X2MGT7.fasta out_dir --num-recycle 3
+  2024-08-07 11:04:22,702 Running colabfold 1.5.5 (1ccca5a53d20c909f3ccf8a4b81df804e6717cb1)
+
+  WARNING: You are welcome to use the default MSA server, however keep in mind that it's a
+  limited shared resource only capable of processing a few thousand MSAs per day. Please
+  submit jobs only from a single IP address. We reserve the right to limit access to the
+  server case-by-case when usage exceeds fair use. If you require more MSAs: You can
+  precompute all MSAs with `colabfold_search` or host your own API and pass it to `--host-url`
+
+  2024-08-07 11:04:23,783 Running on GPU
+  2024-08-07 11:04:24,437 Found 5 citations for tools or databases
+  2024-08-07 11:04:24,437 Query 1/1: tr_A0A9X2MGT7_A0A9X2MGT7_9FIRM_Type_VI-C_CRISPR-associated_RNA-guided_ribonuclease_Cas13c_OS_Anaerosalibacter_massiliensis_OX_1347392_GN_cas13c_PE_4_SV_1 (length 1111)
+  COMPLETE: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 150/150 [elapsed: 00:01 remaining: 00:00]
+  2024-08-07 11:04:27,519 Setting max_seq=64, max_extra_seq=1
+  2024-08-07 11:05:56,561 alphafold2_ptm_model_1_seed_000 recycle=0 pLDDT=55.2 pTM=0.45
+  2024-08-07 11:06:50,394 alphafold2_ptm_model_1_seed_000 recycle=1 pLDDT=68.6 pTM=0.646 tol=11.5
+  2024-08-07 11:07:44,227 alphafold2_ptm_model_1_seed_000 recycle=2 pLDDT=73.1 pTM=0.686 tol=2.22
+  2024-08-07 11:08:38,082 alphafold2_ptm_model_1_seed_000 recycle=3 pLDDT=73 pTM=0.685 tol=0.964
+  2024-08-07 11:08:38,083 alphafold2_ptm_model_1_seed_000 took 231.7s (3 recycles)
+  2024-08-07 11:09:32,989 alphafold2_ptm_model_2_seed_000 recycle=0 pLDDT=61.8 pTM=0.491
+  2024-08-07 11:10:26,871 alphafold2_ptm_model_2_seed_000 recycle=1 pLDDT=71.2 pTM=0.655 tol=7.3
+  2024-08-07 11:11:20,753 alphafold2_ptm_model_2_seed_000 recycle=2 pLDDT=73.8 pTM=0.698 tol=2.15
+  2024-08-07 11:12:14,653 alphafold2_ptm_model_2_seed_000 recycle=3 pLDDT=73.9 pTM=0.695 tol=0.867
+  2024-08-07 11:12:14,655 alphafold2_ptm_model_2_seed_000 took 215.5s (3 recycles)
+  2024-08-07 11:13:09,562 alphafold2_ptm_model_3_seed_000 recycle=0 pLDDT=64.3 pTM=0.554
+  2024-08-07 11:14:03,448 alphafold2_ptm_model_3_seed_000 recycle=1 pLDDT=72.8 pTM=0.688 tol=7.73
+  2024-08-07 11:14:57,322 alphafold2_ptm_model_3_seed_000 recycle=2 pLDDT=75.1 pTM=0.712 tol=1.73
+  2024-08-07 11:15:51,181 alphafold2_ptm_model_3_seed_000 recycle=3 pLDDT=76.1 pTM=0.716 tol=0.902
+  2024-08-07 11:15:51,182 alphafold2_ptm_model_3_seed_000 took 215.5s (3 recycles)
+  2024-08-07 11:16:46,085 alphafold2_ptm_model_4_seed_000 recycle=0 pLDDT=62.3 pTM=0.528
+  2024-08-07 11:17:39,954 alphafold2_ptm_model_4_seed_000 recycle=1 pLDDT=73.9 pTM=0.709 tol=6.2
+  2024-08-07 11:18:33,819 alphafold2_ptm_model_4_seed_000 recycle=2 pLDDT=75.2 pTM=0.718 tol=1.76
+  2024-08-07 11:19:27,693 alphafold2_ptm_model_4_seed_000 recycle=3 pLDDT=75.3 pTM=0.708 tol=1.54
+  2024-08-07 11:19:27,695 alphafold2_ptm_model_4_seed_000 took 215.5s (3 recycles)
+  2024-08-07 11:20:22,592 alphafold2_ptm_model_5_seed_000 recycle=0 pLDDT=64.3 pTM=0.591
+  2024-08-07 11:21:16,475 alphafold2_ptm_model_5_seed_000 recycle=1 pLDDT=73.8 pTM=0.716 tol=6.65
+  2024-08-07 11:22:10,378 alphafold2_ptm_model_5_seed_000 recycle=2 pLDDT=74.9 pTM=0.731 tol=1.27
+  2024-08-07 11:23:04,285 alphafold2_ptm_model_5_seed_000 recycle=3 pLDDT=75.8 pTM=0.738 tol=1.16
+  2024-08-07 11:23:04,287 alphafold2_ptm_model_5_seed_000 took 215.6s (3 recycles)
+  2024-08-07 11:23:05,290 reranking models by 'plddt' metric
+  2024-08-07 11:23:05,309 rank_001_alphafold2_ptm_model_3_seed_000 pLDDT=76.1 pTM=0.716
+  2024-08-07 11:23:05,310 rank_002_alphafold2_ptm_model_5_seed_000 pLDDT=75.8 pTM=0.738
+  2024-08-07 11:23:05,311 rank_003_alphafold2_ptm_model_4_seed_000 pLDDT=75.3 pTM=0.708
+  2024-08-07 11:23:05,312 rank_004_alphafold2_ptm_model_2_seed_000 pLDDT=73.9 pTM=0.695
+  2024-08-07 11:23:05,313 rank_005_alphafold2_ptm_model_1_seed_000 pLDDT=73 pTM=0.685
+  2024-08-07 11:23:08,499 Done
+   ```
+</details>
+
 1. automated structureal-search pipeline
     * identify an ancestral clade of Cas13 (Cas13an).
     * trace Cas13 origins to defense-associated ribonucleases.
@@ -32,134 +105,9 @@
 9. contigs encoding the Cas13 candidates were downloaded, and annotated for CRISPR arrays using the CRT tool (v1.2) (48). This analysis led to the identification of the Cas13an systems characterized in this study.
 10. 
 
-```
-# To activate this environment, use
-#
-#     $ conda activate /storage/shenhuaizhongLab/lihuilin/ColabFold/localcolabfold/colabfold-conda
-#
-# To deactivate an active environment, use
-#
-#     $ conda deactivate
-
-
-```
-```
-Installation of ColabFold finished.
-Add /storage/shenhuaizhongLab/lihuilin/ColabFold/localcolabfold/colabfold-conda/bin to your PATH environment variable to run 'colabfold_batch'.
-i.e. for Bash:
-        export PATH="/storage/shenhuaizhongLab/lihuilin/ColabFold/localcolabfold/colabfold-conda/bin:$PATH"
-For more details, please run 'colabfold_batch --help'.
-```
-```
-colabfold_batch --help
-usage: colabfold_batch [-h] [--msa-only] [--msa-mode {mmseqs2_uniref_env,mmseqs2_uniref_env_envpair,mmseqs2_uniref,single_sequence}] [--pair-mode {unpaired,paired,unpaired_paired}] [--pair-strategy {complete,greedy}] [--templates]
-                       [--custom-template-path CUSTOM_TEMPLATE_PATH] [--pdb-hit-file PDB_HIT_FILE] [--local-pdb-path LOCAL_PDB_PATH] [--num-recycle NUM_RECYCLE] [--recycle-early-stop-tolerance RECYCLE_EARLY_STOP_TOLERANCE] [--num-ensemble NUM_ENSEMBLE]
-                       [--num-seeds NUM_SEEDS] [--random-seed RANDOM_SEED] [--num-models {1,2,3,4,5}] [--model-type {auto,alphafold2,alphafold2_ptm,alphafold2_multimer_v1,alphafold2_multimer_v2,alphafold2_multimer_v3,deepfold_v1}] [--model-order MODEL_ORDER]
-                       [--use-dropout] [--max-seq MAX_SEQ] [--max-extra-seq MAX_EXTRA_SEQ] [--max-msa MAX_MSA] [--disable-cluster-profile] [--data DATA] [--amber] [--num-relax NUM_RELAX] [--relax-max-iterations RELAX_MAX_ITERATIONS] [--relax-tolerance RELAX_TOLERANCE]
-                       [--relax-stiffness RELAX_STIFFNESS] [--relax-max-outer-iterations RELAX_MAX_OUTER_ITERATIONS] [--use-gpu-relax] [--rank {auto,plddt,ptm,iptm,multimer}] [--stop-at-score STOP_AT_SCORE] [--jobname-prefix JOBNAME_PREFIX] [--save-all] [--save-recycles]
-                       [--save-single-representations] [--save-pair-representations] [--overwrite-existing-results] [--zip] [--sort-queries-by {none,length,random}] [--host-url HOST_URL] [--disable-unified-memory] [--recompile-padding RECOMPILE_PADDING]
-                       input results
-
-positional arguments:
-  input                 One of: 1) directory with FASTA/A3M files, 2) CSV/TSV file, 3) FASTA file or 4) A3M file.
-  results               Results output directory.
-
-options:
-  -h, --help            show this help message and exit
-
-MSA arguments:
-
-  --msa-only            Query and store MSAs from the MSA server without structure prediction (default: False)
-  --msa-mode {mmseqs2_uniref_env,mmseqs2_uniref_env_envpair,mmseqs2_uniref,single_sequence}
-                        Databases to use to create the MSA: UniRef30+Environmental (default), UniRef30 only or None. Using an A3M file as input overwrites this option. (default: mmseqs2_uniref_env)
-  --pair-mode {unpaired,paired,unpaired_paired}
-                        Multimer MSA pairing mode for complex prediction: unpaired MSA only, paired MSA only, both (default). (default: unpaired_paired)
-  --pair-strategy {complete,greedy}
-                        How sequences are paired during MSA pairing for complex prediction. complete: MSA sequences should only be paired if the same species exists in all MSAs. greedy: MSA sequences should only be paired if the same species exists in at least two MSAs.
-                        Typically, greedy produces better predictions as it results in more paired sequences. However, in some cases complete pairing might help, especially if MSAs are already large and can be well paired. (default: greedy)
-  --templates           Query PDB templates from the MSA server. If this parameter is not set, "--custom-template-path" and "--pdb-hit-file" will not be used. Warning: This can result in the MSA server being queried with A3M input. (default: False)
-  --custom-template-path CUSTOM_TEMPLATE_PATH
-                        Directory with PDB files to provide as custom templates to the predictor. No templates will be queried from the MSA server. '--templates' argument is also required to enable this. (default: None)
-  --pdb-hit-file PDB_HIT_FILE
-                        Path to a BLAST-m8 formatted PDB hit file corresponding to the input A3M file (e.g. pdb70.m8). Typically, this parameter should be used for a MSA generated by 'colabfold_search'. '--templates' argument is also required to enable this. (default:
-                        None)
-  --local-pdb-path LOCAL_PDB_PATH
-                        Directory of a local mirror of the PDB mmCIF database (e.g. /path/to/pdb/divided). If provided, PDB files from the directory are used for templates specified by '--pdb-hit-file'. (default: None)
-
-Prediction arguments:
-
-  --num-recycle NUM_RECYCLE
-                        Number of prediction recycles. Increasing recycles can improve the prediction quality but slows down the prediction. (default: None)
-  --recycle-early-stop-tolerance RECYCLE_EARLY_STOP_TOLERANCE
-                        Specify convergence criteria. Run recycles until the distance between recycles is within the given tolerance value. (default: None)
-  --num-ensemble NUM_ENSEMBLE
-                        Number of ensembles. The trunk of the network is run multiple times with different random choices for the MSA cluster centers. This can result in a better prediction at the cost of longer runtime. (default: 1)
-  --num-seeds NUM_SEEDS
-                        Number of seeds to try. Will iterate from range(random_seed, random_seed+num_seeds). This can result in a better/different prediction at the cost of longer runtime. (default: 1)
-  --random-seed RANDOM_SEED
-                        Changing the seed for the random number generator can result in better/different structure predictions. (default: 0)
-  --num-models {1,2,3,4,5}
-                        Number of models to use for structure prediction. Reducing the number of models speeds up the prediction but results in lower quality. (default: 5)
-  --model-type {auto,alphafold2,alphafold2_ptm,alphafold2_multimer_v1,alphafold2_multimer_v2,alphafold2_multimer_v3,deepfold_v1}
-                        Predict structure/complex using the given model. Auto will pick "alphafold2_ptm" for structure predictions and "alphafold2_multimer_v3" for complexes. Older versions of the AF2 models are generally worse, however they can sometimes result in better
-                        predictions. If the model is not already downloaded, it will be automatically downloaded. (default: auto)
-  --model-order MODEL_ORDER
-  --use-dropout         Activate dropouts during inference to sample from uncertainty of the models. This can result in different predictions and can be (carefully!) used for conformations sampling. (default: False)
-  --max-seq MAX_SEQ     Number of sequence clusters to use. This can result in different predictions and can be (carefully!) used for conformations sampling. (default: None)
-  --max-extra-seq MAX_EXTRA_SEQ
-                        Number of extra sequences to use. This can result in different predictions and can be (carefully!) used for conformations sampling. (default: None)
-  --max-msa MAX_MSA     Defines: `max-seq:max-extra-seq` number of sequences to use in one go. "--max-seq" and "--max-extra-seq" are ignored if this parameter is set. (default: None)
-  --disable-cluster-profile
-                        Experimental: For multimer models, disable cluster profiles. (default: False)
-  --data DATA           Path to AlphaFold2 weights directory. (default: None)
-
-Relaxation arguments:
-
-  --amber               Enable OpenMM/Amber for structure relaxation. Can improve the quality of side-chains at a cost of longer runtime. (default: False)
-  --num-relax NUM_RELAX
-                        Specify how many of the top ranked structures to relax using OpenMM/Amber. Typically, relaxing the top-ranked prediction is enough and speeds up the runtime. (default: 0)
-  --relax-max-iterations RELAX_MAX_ITERATIONS
-                        Maximum number of iterations for the relaxation process. AlphaFold2 sets this to unlimited (0), however, we found that this can lead to very long relaxation times for some inputs. (default: 2000)
-  --relax-tolerance RELAX_TOLERANCE
-                        Tolerance threshold for relaxation convergence. (default: 2.39)
-  --relax-stiffness RELAX_STIFFNESS
-                        Stiffness parameter for relaxation. (default: 10.0)
-  --relax-max-outer-iterations RELAX_MAX_OUTER_ITERATIONS
-                        Maximum number of outer iterations for the relaxation process. (default: 3)
-  --use-gpu-relax       Run OpenMM/Amber on GPU instead of CPU. This can significantly speed up the relaxation runtime, however, might lead to compatibility issues with CUDA. Unsupported on AMD/ROCM and Apple Silicon. (default: False)
-
-Output arguments:
-
-  --rank {auto,plddt,ptm,iptm,multimer}
-                        Choose metric to rank the "--num-models" predicted models. (default: auto)
-  --stop-at-score STOP_AT_SCORE
-                        Compute models until pLDDT (single chain) or pTM-score (multimer) > threshold is reached. This speeds up prediction by running less models for easier queries. (default: 100)
-  --jobname-prefix JOBNAME_PREFIX
-                        If set, the jobname will be prefixed with the given string and a running number, instead of the input headers/accession. (default: None)
-  --save-all            Save all raw outputs from model to a pickle file. Useful for downstream use in other models. (default: False)
-  --save-recycles       Save all intermediate predictions at each recycle iteration. (default: False)
-  --save-single-representations
-                        Save the single representation embeddings of all models. (default: False)
-  --save-pair-representations
-                        Save the pair representation embeddings of all models. (default: False)
-  --overwrite-existing-results
-                        Do not recompute results, if a query has already been predicted. (default: False)
-  --zip                 Zip all results into one <jobname>.result.zip and delete the original files. (default: False)
-  --sort-queries-by {none,length,random}
-                        Sort input queries by: none, length, random. Sorting by length speeds up prediction as models are recompiled less often. (default: length)
-
-Advanced arguments:
-
-  --host-url HOST_URL   Which MSA server should be queried. By default, the free public MSA server hosted by the ColabFold team is queried. (default: https://api.colabfold.com)
-  --disable-unified-memory
-                        If you are getting TensorFlow/Jax errors, it might help to disable this. (default: False)
-  --recompile-padding RECOMPILE_PADDING
-                        Whenever the input length changes, the model needs to be recompiled. We pad sequences by the specified length, so we can e.g., compute sequences from length 100 to 110 without recompiling. Individual predictions will become marginally slower due to
-                        longer input, but overall performance increases due to not recompiling. Set to 0 to disable. (default: 10)
 
 
 
-```
 ```
 (/storage/shenhuaizhongLab/lihuilin/ColabFold/localcolabfold/colabfold-conda) [lihuilin@gvnq04 localcolabfold]$ colabfold_batch A0A9X2MGT7.fasta out_dir --num-recycle 3
 2024-08-07 11:04:22,702 Running colabfold 1.5.5 (1ccca5a53d20c909f3ccf8a4b81df804e6717cb1)
