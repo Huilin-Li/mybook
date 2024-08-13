@@ -1,19 +1,20 @@
 # domain definition
- If I have protein dataset, and I can perform cluster analysis, then, how to define or decide to say this set of (parts of) sequences is much worthy for us to do wet-lab experiments, in order to discover new domains.
+ If I have protein dataset (fasta and pdb files), and I can perform cluster analysis using similarity calculation, then, how to define or decide to say this set of (parts of) sequences is much worthy for us to do wet-lab experiments, in order to discover new domains.
 
-  1. [discover uncharacterized proteins with targe domains/domains with target functions](#discover-new-proteins-with-targe-domains)
+  1. [discover uncharacterized proteins with targe domains](#discover-new-proteins-with-targe-domains)
   2. [discover uncharacterized proteins purely using cluster and alignment analysis](#discover-uncharacterized-proteins-purely-using-cluster-and-alignment-analysis)
 
  > SCOPe: Structural Classification of Proteins—extended, integrating SCOP and ASTRAL data and classification of new structures 
 
-## 1. discover uncharacterized proteins with targe domains
-### replication
+## 1. Discover uncharacterized proteins with targe domains
+### Example
  > Structure-guided discovery of ancestral CRISPR-Cas13 ribonucleases
+ #### replication
 1. Cas13a, Cas13b, and Cas13d whose structures are PDBID: 5XWP, 6DTD, 6E9F
-2. *For Cas13c, which lacks an experimental structure, a ColabFold (43) model of A0A9X2MGT7 was generated using three recycles without amber relaxation.*
+2. *For Cas13c, which lacks an experimental structure, a ColabFold (43) model of A0A9X2MGT7 was generated using three recycles without amber relaxation.* A0A9X2MGT7 fasta is [https://www.uniprot.org/uniprotkb/A0A9X2MGT7/entry](https://www.uniprot.org/uniprotkb/A0A9X2MGT7/entry)
 <details>
-  <summary>ColabFold Usage</summary>
-  
+  <summary>ColabFold Usage to generate A0A9X2MGT7 structure</summary>
+
   ```
   # https://github.com/sokrypton/ColabFold
   colabfold_batch A0A9X2MGT7.fasta out_dir --num-recycle 3
@@ -81,6 +82,55 @@
    ```
 </details>
 
+3. isolate HEPN core regions using ChimeraX: \
+  (1) 5XWP: Cas13a, HEPN domain sequences (3 fragments) extraction using ChimeraX \
+![alt text](../img/5xwp-chimeraX.png)
+```
+# cas13a-5xwp-HEPN-like-fold-1-I = 5xD1.pdb = sequence_ids = list(range(361,509))
+# cas13a-5xwp-HEPN-like-fold-1-II = 5xD2.pdb = sequence_ids = list(range(752,814))
+# cas13a-5xwp-HEPN-like-fold-2 = 5xD3.pdb = sequence_ids = list(range(947,1153))
+```
+  (2) 6DTD: \
+  (3) 6E9F: \
+  (4) A0A9X2MGT7: 
+```
+../bin/dali.pl 
+--cd1 2nrmA  # --cd1 <xxxxX>             query structure identifier
+--db pdb.list #--db <filename>           list of target structure identifiers
+--TITLE systematic 
+--dat1 ../DAT # path to directory containing query data [default: ./DAT/]
+--dat2 ../DAT # path to directory containing target data [default: ./DAT/]
+> systematic.stdout 
+2> systematic.stderr
+
+```
+
+
+
+4. **All pdb to internal data format (xxxxX.dat) used by Dali**
+```
+module load blast/2.11.0+
+cd domainPDB
+
+../bin/import.pl 
+--pdbfile ../toy_PDB/pdb1ppt.ent 
+--pdbid 1ppt 
+--dat ./ 
+> import.stdout 2> import.stderr
+
+```
+
+
+4. http://ekhidna2.biocenter.helsinki.fi/dali/README.v5.html
+
+
+
+
+
+
+
+###############################################################
+
 1. automated structureal-search pipeline
     * identify an ancestral clade of Cas13 (Cas13an).
     * trace Cas13 origins to defense-associated ribonucleases.
@@ -108,55 +158,6 @@
 
 
 
-```
-(/storage/shenhuaizhongLab/lihuilin/ColabFold/localcolabfold/colabfold-conda) [lihuilin@gvnq04 localcolabfold]$ colabfold_batch A0A9X2MGT7.fasta out_dir --num-recycle 3
-2024-08-07 11:04:22,702 Running colabfold 1.5.5 (1ccca5a53d20c909f3ccf8a4b81df804e6717cb1)
-
-WARNING: You are welcome to use the default MSA server, however keep in mind that it's a
-limited shared resource only capable of processing a few thousand MSAs per day. Please
-submit jobs only from a single IP address. We reserve the right to limit access to the
-server case-by-case when usage exceeds fair use. If you require more MSAs: You can
-precompute all MSAs with `colabfold_search` or host your own API and pass it to `--host-url`
-
-2024-08-07 11:04:23,783 Running on GPU
-2024-08-07 11:04:24,437 Found 5 citations for tools or databases
-2024-08-07 11:04:24,437 Query 1/1: tr_A0A9X2MGT7_A0A9X2MGT7_9FIRM_Type_VI-C_CRISPR-associated_RNA-guided_ribonuclease_Cas13c_OS_Anaerosalibacter_massiliensis_OX_1347392_GN_cas13c_PE_4_SV_1 (length 1111)
-COMPLETE: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 150/150 [elapsed: 00:01 remaining: 00:00]
-2024-08-07 11:04:27,519 Setting max_seq=64, max_extra_seq=1
-2024-08-07 11:05:56,561 alphafold2_ptm_model_1_seed_000 recycle=0 pLDDT=55.2 pTM=0.45
-2024-08-07 11:06:50,394 alphafold2_ptm_model_1_seed_000 recycle=1 pLDDT=68.6 pTM=0.646 tol=11.5
-2024-08-07 11:07:44,227 alphafold2_ptm_model_1_seed_000 recycle=2 pLDDT=73.1 pTM=0.686 tol=2.22
-2024-08-07 11:08:38,082 alphafold2_ptm_model_1_seed_000 recycle=3 pLDDT=73 pTM=0.685 tol=0.964
-2024-08-07 11:08:38,083 alphafold2_ptm_model_1_seed_000 took 231.7s (3 recycles)
-2024-08-07 11:09:32,989 alphafold2_ptm_model_2_seed_000 recycle=0 pLDDT=61.8 pTM=0.491
-2024-08-07 11:10:26,871 alphafold2_ptm_model_2_seed_000 recycle=1 pLDDT=71.2 pTM=0.655 tol=7.3
-2024-08-07 11:11:20,753 alphafold2_ptm_model_2_seed_000 recycle=2 pLDDT=73.8 pTM=0.698 tol=2.15
-2024-08-07 11:12:14,653 alphafold2_ptm_model_2_seed_000 recycle=3 pLDDT=73.9 pTM=0.695 tol=0.867
-2024-08-07 11:12:14,655 alphafold2_ptm_model_2_seed_000 took 215.5s (3 recycles)
-2024-08-07 11:13:09,562 alphafold2_ptm_model_3_seed_000 recycle=0 pLDDT=64.3 pTM=0.554
-2024-08-07 11:14:03,448 alphafold2_ptm_model_3_seed_000 recycle=1 pLDDT=72.8 pTM=0.688 tol=7.73
-2024-08-07 11:14:57,322 alphafold2_ptm_model_3_seed_000 recycle=2 pLDDT=75.1 pTM=0.712 tol=1.73
-2024-08-07 11:15:51,181 alphafold2_ptm_model_3_seed_000 recycle=3 pLDDT=76.1 pTM=0.716 tol=0.902
-2024-08-07 11:15:51,182 alphafold2_ptm_model_3_seed_000 took 215.5s (3 recycles)
-2024-08-07 11:16:46,085 alphafold2_ptm_model_4_seed_000 recycle=0 pLDDT=62.3 pTM=0.528
-2024-08-07 11:17:39,954 alphafold2_ptm_model_4_seed_000 recycle=1 pLDDT=73.9 pTM=0.709 tol=6.2
-2024-08-07 11:18:33,819 alphafold2_ptm_model_4_seed_000 recycle=2 pLDDT=75.2 pTM=0.718 tol=1.76
-2024-08-07 11:19:27,693 alphafold2_ptm_model_4_seed_000 recycle=3 pLDDT=75.3 pTM=0.708 tol=1.54
-2024-08-07 11:19:27,695 alphafold2_ptm_model_4_seed_000 took 215.5s (3 recycles)
-2024-08-07 11:20:22,592 alphafold2_ptm_model_5_seed_000 recycle=0 pLDDT=64.3 pTM=0.591
-2024-08-07 11:21:16,475 alphafold2_ptm_model_5_seed_000 recycle=1 pLDDT=73.8 pTM=0.716 tol=6.65
-2024-08-07 11:22:10,378 alphafold2_ptm_model_5_seed_000 recycle=2 pLDDT=74.9 pTM=0.731 tol=1.27
-2024-08-07 11:23:04,285 alphafold2_ptm_model_5_seed_000 recycle=3 pLDDT=75.8 pTM=0.738 tol=1.16
-2024-08-07 11:23:04,287 alphafold2_ptm_model_5_seed_000 took 215.6s (3 recycles)
-2024-08-07 11:23:05,290 reranking models by 'plddt' metric
-2024-08-07 11:23:05,309 rank_001_alphafold2_ptm_model_3_seed_000 pLDDT=76.1 pTM=0.716
-2024-08-07 11:23:05,310 rank_002_alphafold2_ptm_model_5_seed_000 pLDDT=75.8 pTM=0.738
-2024-08-07 11:23:05,311 rank_003_alphafold2_ptm_model_4_seed_000 pLDDT=75.3 pTM=0.708
-2024-08-07 11:23:05,312 rank_004_alphafold2_ptm_model_2_seed_000 pLDDT=73.9 pTM=0.695
-2024-08-07 11:23:05,313 rank_005_alphafold2_ptm_model_1_seed_000 pLDDT=73 pTM=0.685
-2024-08-07 11:23:08,499 Done
-
-```
 
 1. 5XWP:
 ![alt text](../img/5XWP.png)
