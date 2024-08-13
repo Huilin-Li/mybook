@@ -9,11 +9,15 @@
 ## 1. Discover uncharacterized proteins with targe domains
 ### Example
  > Structure-guided discovery of ancestral CRISPR-Cas13 ribonucleases
- #### replication
+#### replication
+##### tools:
+- ColdFold (https://github.com/sokrypton/ColabFold)
+- DaliLite.v5 local usage (http://ekhidna2.biocenter.helsinki.fi/dali/README.v5.html)
+
 1. Cas13a, Cas13b, and Cas13d whose structures are PDBID: 5XWP, 6DTD, 6E9F
 2. *For Cas13c, which lacks an experimental structure, a ColabFold (43) model of A0A9X2MGT7 was generated using three recycles without amber relaxation.* A0A9X2MGT7 fasta is [https://www.uniprot.org/uniprotkb/A0A9X2MGT7/entry](https://www.uniprot.org/uniprotkb/A0A9X2MGT7/entry)
 <details>
-  <summary>ColabFold Usage to generate A0A9X2MGT7 structure</summary>
+  <summary><b>ColabFold Usage to generate A0A9X2MGT7 structure</b></summary>
 
   ```
   # https://github.com/sokrypton/ColabFold
@@ -93,21 +97,27 @@
   (2) 6DTD: \
   (3) 6E9F: \
   (4) A0A9X2MGT7: 
-```
-../bin/dali.pl 
---cd1 2nrmA  # --cd1 <xxxxX>             query structure identifier
---db pdb.list #--db <filename>           list of target structure identifiers
---TITLE systematic 
---dat1 ../DAT # path to directory containing query data [default: ./DAT/]
---dat2 ../DAT # path to directory containing target data [default: ./DAT/]
-> systematic.stdout 
-2> systematic.stderr
-
-```
 
 
 
-4. **All pdb to internal data format (xxxxX.dat) used by Dali**
+4. **All pdb to internal data format (xxxxX.dat) used by Dali/import.pl**
+
+<details>
+    <summary><b>DaliLite.v5/import.pl usage to generate  </b></summary>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 module load blast/2.11.0+
 cd domainPDB
@@ -117,6 +127,18 @@ cd domainPDB
 --pdbid 1ppt 
 --dat ./ 
 > import.stdout 2> import.stderr
+
+```
+
+```
+../bin/dali.pl 
+--cd1 2nrmA  # --cd1 <xxxxX>             query structure identifier
+--db pdb.list #--db <filename>           list of target structure identifiers
+--TITLE systematic 
+--dat1 ../DAT # path to directory containing query data [default: ./DAT/]
+--dat2 ../DAT # path to directory containing target data [default: ./DAT/]
+> systematic.stdout 
+2> systematic.stderr
 
 ```
 
