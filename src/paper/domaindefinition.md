@@ -11,9 +11,10 @@
  > Structure-guided discovery of ancestral CRISPR-Cas13 ribonucleases
 #### replication
 ##### tools:
-- ColdFold (https://github.com/sokrypton/ColabFold)
-- DaliLite.v5 local usage (http://ekhidna2.biocenter.helsinki.fi/dali/README.v5.html)
+- ColdFold ( https://github.com/sokrypton/ColabFold )
+- DaliLite.v5 manual ( http://ekhidna2.biocenter.helsinki.fi/dali/README.v5.html )
 
+##### progress:
 1. Cas13a, Cas13b, and Cas13d whose structures are PDBID: 5XWP, 6DTD, 6E9F
 2. *For Cas13c, which lacks an experimental structure, a ColabFold (43) model of A0A9X2MGT7 was generated using three recycles without amber relaxation.* A0A9X2MGT7 fasta is [https://www.uniprot.org/uniprotkb/A0A9X2MGT7/entry](https://www.uniprot.org/uniprotkb/A0A9X2MGT7/entry)
 <details>
@@ -101,10 +102,40 @@
 
 
 4. **All pdb to internal data format (xxxxX.dat) used by Dali/import.pl**
+<div class="warning">
+After <code>$ tar -zxvf DaliLite.v5.tar.gz</code>, <code>$ cd DaliLite.v5/bin</code>, <code>$ make clean</code>, <code>$ make</code>, replace <code>$ DaliLite.v5/bin/dsspcmbi</code> with <code>$ aliLite.v5/bin/dsspcmbi/dsspcmbi</code>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <details>
-    <summary><b>DaliLite.v5/import.pl usage to generate  </b></summary>
+    <summary><b>DaliLite.v5/import.pl usage to generate internal data format used by dali.pl </b></summary>
 
+```
+# http://ekhidna2.biocenter.helsinki.fi/dali/README.v5.html
+
+
+```
 </details>
 
 
