@@ -128,6 +128,14 @@ identification of the Cas13an systems characterized in this study.
 ![alt text](./img/domain13.png)
 
 
+<div class="warning">
+1. Customized place:<br>
+    1.1 target example (HEPN domain in Cas13a, Cas13b, Cas13c, Cas13d)</br>
+    1.2 target features (Rx4H motif, R****H)
+
+
+
+</div>
 
 
 
