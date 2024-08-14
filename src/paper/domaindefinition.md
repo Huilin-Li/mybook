@@ -11,8 +11,11 @@
  > Structure-guided discovery of ancestral CRISPR-Cas13 ribonucleases
 #### replication
 ##### tools:
-- ColdFold ( https://github.com/sokrypton/ColabFold )
-- DaliLite.v5 manual ( http://ekhidna2.biocenter.helsinki.fi/dali/README.v5.html )
+- ColdFold ( https://github.com/sokrypton/ColabFold ) for structure prediction.
+- DaliLite.v5 manual ( http://ekhidna2.biocenter.helsinki.fi/dali/README.v5.html ) for systematic search (kind of structure-based search).
+- HMMsearch ( http://hmmer.org/documentation.html ) for sequence similarity search.
+- CRISPR Recognition Tool (CRT) ( https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-8-209 ) http://www.room220.com/crt/
+
 
 ##### progress:
 1. Cas13a, Cas13b, and Cas13d whose structures are PDBID: 5XWP, 6DTD, 6E9F
@@ -101,12 +104,12 @@
 
 
 
-4. **All pdb to internal data format (xxxxX.dat) used by Dali/import.pl**
+4. All pdb to internal data format (xxxxX.dat) used by Dali/import.pl
 <div class="warning">
 After <code>$ tar -zxvf DaliLite.v5.tar.gz</code>, <code>$ cd DaliLite.v5/bin</code>, <code>$ make clean</code>, <code>$ make</code>, replace <code>$ DaliLite.v5/bin/dsspcmbi</code> with <code>$ aliLite.v5/bin/dsspcmbi/dsspcmbi</code>
-
 </div>
 
+5. systematic search by Dali/dali.pl
 
 
 
@@ -122,31 +125,7 @@ After <code>$ tar -zxvf DaliLite.v5.tar.gz</code>, <code>$ cd DaliLite.v5/bin</c
 
 
 
-
-
-
-
-
-
-<details>
-    <summary><b>DaliLite.v5/import.pl usage to generate internal data format used by dali.pl </b></summary>
-
-```
-# http://ekhidna2.biocenter.helsinki.fi/dali/README.v5.html
-
-
-```
-</details>
-
-
-
-
-
-
-
-
-
-
+############################################## stop here #############################################################
 
 
 ```
