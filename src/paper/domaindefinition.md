@@ -99,7 +99,9 @@
 # cas13a-5xwp-HEPN-like-fold-2 = 5xD3.pdb = sequence_ids = list(range(947,1153))
 ```
   (2) 6DTD: \
+![alt text](../img/6DTD.png)\
   (3) 6E9F: \
+![alt text](../img/6E9F.png)
   (4) A0A9X2MGT7: 
 
 
