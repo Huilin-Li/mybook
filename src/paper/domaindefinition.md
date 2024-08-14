@@ -110,9 +110,22 @@ After <code>$ tar -zxvf DaliLite.v5.tar.gz</code>, <code>$ cd DaliLite.v5/bin</c
 </div>
 
 5. systematic search by Dali/dali.pl
+6. filter by Z-score
+7. filter by signature Rx4H motif of HEPN domain. (sequence level analysis)
+
+![alt text](./img/domain12.png)
 
 
+8. sequence-based search via PSI-BLAST and HMMsearch, to collect highly matchable candidates-2
 
+
+> original text\
+> Following this 
+sequence-based enrichment step, contigs encoding the Cas13 candidates were downloaded, and 
+annotated for CRISPR arrays using the CRT tool (v1.2) (48). This analysis led to the 
+identification of the Cas13an systems characterized in this study. 
+
+![alt text](./img/domain13.png)
 
 
 
