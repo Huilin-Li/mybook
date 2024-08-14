@@ -116,7 +116,7 @@ After <code>$ tar -zxvf DaliLite.v5.tar.gz</code>, <code>$ cd DaliLite.v5/bin</c
 ![alt text](./img/domain12.png)
 
 
-8. sequence-based search via PSI-BLAST and HMMsearch, to collect highly matchable candidates-2
+8. **results of dali as new queries**,sequence-based search via PSI-BLAST and HMMsearch, **new candidates**, to collect highly matchable candidates-2
 
 
 > original text\
@@ -129,11 +129,14 @@ identification of the Cas13an systems characterized in this study.
 
 
 <div class="warning">
-1. Customized place:<br>
-    1.1 target example (HEPN domain in Cas13a, Cas13b, Cas13c, Cas13d)</br>
-    1.2 target features (Rx4H motif, R****H)
 
+1. Customized places:<br>
+&emsp; 1.1 target example (HEPN domain in Cas13a, Cas13b, Cas13c, Cas13d)</br>
+&emsp; 1.2 target features (Rx4H motif, R****H)
 
+2. Firstly structure-level search; Secondlly sequence-level search.
+
+3. The focus is on significant discoveries rather than methods.
 
 </div>
 
