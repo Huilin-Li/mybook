@@ -6,7 +6,7 @@
 
 - [language model](./paper/llm.md)
 - [domain definition](./paper/domaindefinition.md)
-- [enzymes](./paper/cellulase.md)
+- [enzymes](./paper/enzyme.md)
 - [FLSHclust](./paper/FLSHclust.md)
 
 # Proteomics
