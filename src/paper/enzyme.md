@@ -1,4 +1,4 @@
-# note
+# enzyme
 
 > Enhanced crystalline cellulose degradation by a novel metagenome-derived cellulase enzyme
 
