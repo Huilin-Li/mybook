@@ -1,3 +1,12 @@
+# outline
+
+enzymes
+
+
+
+
+
+
 > Enhanced crystalline cellulose degradation by a novel metagenome-derived cellulase enzyme
 
 Celcm05-2: The camel rumen metagenome-assembled sequences and the predicted protein-coding genes have been deposited to the Integrated Microbial Genomes (IMG) database under the IMG dataset ID: 3300003523. [link](https://img.jgi.doe.gov/cgi-bin/m/main.cgi?section=GenomeSearchList&page=displayTaxonList&searchFilter=t.taxon_oid&searchTerm=3300003523&file=t.taxon_oid482636)
@@ -21,17 +30,26 @@ Celcm05-2: The camel rumen metagenome-assembled sequences and the predicted prot
 ![alt text](./img/cell12.PNG)
 </details>
 
+
 >  Cell-free chemoenzymatic starch synthesis from carbon dioxide
 
-- Carbonic anhydrase
-- Formate dehydrogenase
-- Formyltetrahydrofolate synthetase
-- Methenyltetrahydrofolate cyclohydrolase
-- Methylenetetrahydrofolate dehydrogenase
-- Methylenetetrahydrofolate reductase
-- Glucose-1-phosphate adenylyltransferase
-- ADP-glucose pyrophosphorylase
-- Starch synthase
-- Branching enzyme
-- Debranching enzyme
 
+##### Modules:
+- C1 module (for formaldehyde production), 
+- C3 module (for D-glyceraldehyde 3-phosphate production), 
+- C6 module (for D-glucose-6-phospate production), 
+- Cn module (for starch synthesis).
+
+![alt text](./img/enzy1.png)
+![alt text](./img/enzy2.png)
+![alt text](./img/enzy3.png)
+
+##### Enzymes selectioin:
+- balance between conversion rate and enzyme yield.
+- inhibition between enzymes.
+- variants
+![alt text](./img/inhibition1.png)
+![alt text](./img/fbap.png)
+![alt text](./img/incompatibility1.png)
+![alt text](./img/variant1.png)
+![alt text](./img/variant2.png)
