@@ -22,5 +22,5 @@
 # Shell everything
 - [shell](./shell.md)
 
-# AI tools
-- [AI tools](./AItools.md)
+# tools
+- [tools](./AItools.md)
